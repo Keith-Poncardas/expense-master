@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>ExpenseMaster</title>
+
+    <!-- Twitter card description for TaskTally, providing a summary of the app's purpose -->
+    <meta name="twitter:description"
+        content="'TaskTally' is a simple and intuitive web app designed to help you keep track of your expenses effortlessly. With an easy-to-use interface built using HTML, CSS, Bootstrap 5, and JavaScript, TaskTally allows you to add, edit, and delete expenses, ensuring you stay on top of your finances. Perfect for individuals seeking a straightforward solution to manage their daily expenditures.">
+
+    <!-- Specifies the type of Twitter card to use, in this case, a summary card -->
+    <meta name="twitter:card" content="summary">
+
+    <!-- URL to the image displayed in the Twitter card -->
+    <meta name="twitter:image" content="assets/img/512x512.png">
+
+    <!-- URL to the image used in the Open Graph (OG) meta tag for sharing on social media -->
+    <meta property="og:image" content="assets/img/512x512.png">
+
+    <!-- General description of TaskTally, used by search engines and social media when sharing the link -->
+    <meta name="description"
+        content="'TaskTally' is a simple and intuitive web app designed to help you keep track of your expenses effortlessly. With an easy-to-use interface built using HTML, CSS, Bootstrap 5, and JavaScript, TaskTally allows you to add, edit, and delete expenses, ensuring you stay on top of your finances. Perfect for individuals seeking a straightforward solution to manage their daily expenditures.">
+
+    <!-- Specifies the type of content for Open Graph, indicating it's a website -->
+    <meta property="og:type" content="website">
+
+    <!-- Title of the content for Twitter sharing -->
+    <meta name="twitter:title" content="TaskTally">
+
+    <!-- Apple touch icon for adding the web app to the home screen on Apple devices -->
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/img/180x180.png">
+
+    <!-- Favicon for browsers with size 16x16 pixels -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/16x16.png">
+
+    <!-- Favicon for browsers with size 32x32 pixels -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/32x32.png">
+
+    <!-- Favicon for browsers with size 180x180 pixels -->
+    <link rel="icon" type="image/png" sizes="180x180" href="assets/img/180x180.png">
+
+    <!-- Favicon for browsers with size 192x192 pixels -->
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/192x192.png">
+
+    <!-- Favicon for browsers with size 512x512 pixels -->
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/512x512.png">
+
+    <!-- Link to the Bootstrap 5 CSS framework from a CDN (Content Delivery Network) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Link to the web app's manifest file, which provides metadata for the web app -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Link to the custom CSS stylesheet for the web app -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Preconnect to Google Fonts for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- Preconnect to Google Fonts' static content delivery for faster loading -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Link to the Kanit font from Google Fonts, with multiple weight options -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Link to Font Awesome's CSS for using icons in the web app -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Animate.css library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+
+<body data-bs-theme="dark">
+
+    <!-- Navigation bar with Bootstrap classes for styling and responsiveness -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container">
+            <!-- Navbar brand linking to the homepage, with an image logo and brand name -->
+            <a class="navbar-brand" href="#" title="TaskTally">
+                <img src="./assets/img/32x32.png" alt="Logo" width="32" height="32"
+                    class="d-inline-block align-text-top">
+                ExpenseMaster <span
+                    class="badge text-bg-info animate__animated animate__jackInTheBox animate__delay-3s">Beta</span>
+            </a>
+
+            <!-- Button for toggling the navigation bar on smaller screens -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible content of the navbar -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- List item for Facebook link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.facebook.com/kitkat.poncardas" target="_blank"
+                            title="Facebook">
+                            <!-- Font Awesome icon for Facebook, visible on large screens -->
+                            <i class="d-lg-inline d-none fa-brands fa-facebook"></i>
+                            <!-- Text label for Facebook, visible on small screens -->
+                            <span class="icon-label d-lg-none">Facebook</span>
+                        </a>
+                    </li>
+                    <!-- List item for GitHub link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/Keith-Poncardas" target="_blank" title="Github">
+                            <!-- Font Awesome icon for GitHub, visible on large screens -->
+                            <i class="d-lg-inline d-none fa-brands fa-github"></i>
+                            <!-- Text label for GitHub, visible on small screens -->
+                            <span class="icon-label d-lg-none">Github</span>
+                        </a>
+                    </li>
+                    <!-- List item for YouTube link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.youtube.com/channel/UCT0F4AQVXWendtSR2tWOqEA"
+                            target="_blank" title="Youtube">
+                            <!-- Font Awesome icon for YouTube, visible on large screens -->
+                            <i class="d-lg-inline d-none fa-brands fa-youtube"></i>
+                            <!-- Text label for YouTube, visible on small screens -->
+                            <span class="icon-label d-lg-none">Youtube</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main container for the Expense Tracker content -->
+    <div class="container main-container">
+
+        <!-- Main heading for the Expense Tracker -->
+        <h1 class="mb-3">Expense Tracker</h1>
+
+        <!-- Form group for entering the expense name, using Bootstrap's floating label style -->
+        <div class="form-floating mb-3 shadow" title="Expense Name">
+            <input type="text" class="form-control form-control-sm expenseNameInput" id="expenseNameInput"
+                placeholder="name@example.com" autocomplete="off">
+            <label for="floatingInput">Expense Name</label>
+        </div>
+
+        <!-- Input group for entering expense amount -->
+        <div class="row">
+            <div class="col-lg-6 col-sm-12">
+                <div class="input-group mb-3 shadow" title="Expense Amount">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Amount</span>
+                    <input id="costInput" type="text" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="00.00" autocomplete="off">
+                </div>
+            </div>
+
+            <!-- Column for quantity input -->
+            <div class="col-lg-6 col-sm-12">
+                <div class="input-group mb-3 shadow">
+                    <span class="input-group-text" id="basic-addon1">Quantity</span>
+                    <input id="quantityInput" type="number" class="form-control" placeholder="1"
+                        aria-describedby="basic-addon1">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Row for containing the cost input and total expenses display -->
+        <div class="row">
+            <!-- Column for search expenses -->
+            <div class="col-lg-7 col-sm-12 mb-3">
+                <div class="input-group shadow" title="Search Expenses">
+                    <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="search" id="searchFilter" aria-label="Search" class="form-control"
+                        placeholder="Search Expense" autocomplete="off">
+                </div>
+            </div>
+            <!-- Date filter -->
+            <div class="col-lg-5 col-sm-12 mb-3">
+                <div class="input-group date shadow" data-provide="datepicker">
+                    <div class="input-group-text rounded-start">
+                        <i class="fa-solid fa-calendar"></i>
+                    </div>
+                    <input id="filterDate" type="date" class="form-control rounded-end" title="Filter Date">
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Total Expenses Display -->
+        <div class="input-group mb-3 shadow" title="Total Expenses">
+            <span class="input-group-text" id="inputGroup-sizing-default"><i class="fa-solid fa-peso-sign"></i></span>
+            <input id="totalExpenses" type="text" class="form-control" aria-describedby="inputGroup-sizing-default"
+                placeholder="00.00" readonly>
+        </div>
+
+        <!-- Container for the action buttons: Add Expense, Clear All, Export -->
+        <div class="d-grid gap-2 d-md-block mb-3">
+            <button id="addExpense" class="custom-button" style="
+                  --btn-padding: 15px 20px;
+                  --btn-font-size: 16px;
+                  --btn-font-weight: 600;
+                  --btn-border-color: #414141;
+                  --btn-text-color: white;
+                  --btn-bg-color: transparent;
+                  --btn-hover-border-color: #0974f1;
+                  --btn-hover-box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
+                  --btn-active-box-shadow: 0 0 10px rgba(9, 117, 241, 0.4);
+                  --btn-border-radius: 10px;
+                  --btn-text-transform: uppercase;
+                  --btn-transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+                ">
+                Add
+            </button>
+            <button id="clearAllExpenses" class="custom-button" style="
+                --btn-padding: 15px 20px;
+                --btn-font-size: 16px;
+                --btn-font-weight: 600;
+                --btn-border-color: #414141; /* Default border color */
+                --btn-text-color: white;
+                --btn-bg-color: transparent;
+                --btn-hover-border-color: #dc3545; /* Danger color for hover */
+                --btn-hover-box-shadow: 0 0 20px rgba(220, 53, 69, 0.8); /* Danger color for hover */
+                --btn-active-box-shadow: 0 0 10px rgba(220, 53, 69, 0.4); /* Danger color for active */
+                --btn-border-radius: 10px;
+                --btn-text-transform: uppercase;
+                --btn-transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+                ">
+                Clear
+            </button>
+            <button id="export" class="custom-button" style="
+                  --btn-padding: 15px 20px;
+                  --btn-font-size: 16px;
+                  --btn-font-weight: 600;
+                  --btn-border-color: #414141; /* Default border color */
+                  --btn-text-color: white;
+                  --btn-bg-color: transparent;
+                  --btn-hover-border-color: #28a745; /* Success color for hover */
+                  --btn-hover-box-shadow: 0 0 20px rgba(40, 167, 69, 0.8); /* Success color for hover */
+                  --btn-active-box-shadow: 0 0 10px rgba(40, 167, 69, 0.4); /* Success color for active */
+                  --btn-border-radius: 10px;
+                  --btn-text-transform: uppercase;
+                  --btn-transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+                ">
+                Export
+            </button>
+
+        </div>
+
+        <!-- Alert div for displaying validation messages -->
+        <div id="inputValidationAlert" role="alert"></div>
+
+        <!-- Alert div for displaying messages when list is already empty -->
+        <div id="emptyAlert" role="alert"></div>
+
+        <!-- Alert for displaying when table is insufficient -->
+        <div id="insufficientAlert" role="alert"></div>
+
+        <!-- Table list to display the list of expenses dynamically -->
+        <div class="table-wrapper border border-secondary rounded shadow">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Expense Name</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Logged Time</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="expenseList"></tbody>
+
+            </table>
+        </div>
+    </div>
+
+    <!-- Navigation bar fixed bottom -->
+    <nav class="navbar fixed-bottom navbar-expand-lg bg-body-tertiary">
+        <div class="container d-flex justify-content-center">
+            <a class="navbar-brand fs-6 text-secondary" href="https://keithponcardas.netlify.app/" target="_blank">Made
+                by Keith Ralph Poncardas.</a>
+        </div>
+    </nav>
+
+    <!-- Main JavaScript file for the web app, containing custom logic -->
+    <script src="./assets/js/main.js"></script>
+
+    <!-- SheetJS library for working with Excel files -->
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+
+    <!-- Popper.js library for positioning tooltips and popovers, necessary for Bootstrap's JavaScript components -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap's JavaScript bundle, which includes the Bootstrap components and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

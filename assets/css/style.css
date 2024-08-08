@@ -1,0 +1,92 @@
+/* Set a default font family for all elements */
+
+* {
+  font-family: "Kanit", sans-serif;
+}
+
+/* Style the brand name in the navbar */
+.navbar-brand {
+  font-size: 1.3rem;
+}
+
+/* Style the font size of icons in navigation links */
+.nav-link i {
+  font-size: 1.2rem;
+}
+
+/* Style the main container with a maximum width and margin for spacing */
+.main-container {
+  max-width: 1000px;
+  margin-top: 5rem;
+}
+
+/* Remove the default spinner (increment/decrement buttons) from number input fields in WebKit browsers */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove the default spinner from number input fields in Firefox */
+input[type="number"] {
+  appearance: none;
+  -moz-appearance: textfield; /* This is still needed for full compatibility */
+}
+
+/* Remove the default spinner from number input fields in all browsers */
+input[type="number"] {
+  appearance: textfield;
+}
+
+.table-wrapper {
+  width: 100%; /* Adjust width as needed */
+  overflow-x: auto; /* Enables horizontal scrolling */
+  height: 400px;
+  margin-bottom: 100px;
+}
+
+.table thead {
+  position: sticky;
+  top: 0;
+  background-color: #f8f9fa; /* Matches the background of the table or the desired color */
+  z-index: 1; /* Ensures the header is above other content */
+}
+
+.table {
+  min-width: 800px; /* Minimum width to ensure proper layout; adjust as needed */
+}
+
+.popover-trigger {
+  cursor: pointer;
+}
+
+/* DEMO BUTTON */
+.custom-button {
+  padding: var(--btn-padding, 15px 20px);
+  font-size: var(--btn-font-size, 15px);
+  font-weight: var(--btn-font-weight, 600);
+  border: 2px solid var(--btn-border-color, #414141);
+  color: var(--btn-text-color, white);
+  background-color: var(--btn-bg-color, transparent);
+  cursor: pointer;
+  border-radius: var(--btn-border-radius, 10px);
+  text-transform: var(--btn-text-transform, uppercase);
+  transition: var(--btn-transition, all 0.4s cubic-bezier(0.23, 1, 0.32, 1));
+}
+
+.custom-button:hover {
+  border-color: var(
+    --btn-hover-border-color,
+    #dc3545
+  ); /* Danger color on hover */
+  box-shadow: var(--btn-hover-box-shadow, 0 0 20px rgba(220, 53, 69, 0.8));
+}
+
+.custom-button:active {
+  box-shadow: var(--btn-active-box-shadow, 0 0 10px rgba(220, 53, 69, 0.4));
+}
+
+/* Reset the border color when not hovering */
+.custom-button:not(:hover) {
+  border-color: var(--btn-border-color, #414141); /* Default border color */
+}
