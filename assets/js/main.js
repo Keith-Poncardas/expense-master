@@ -216,8 +216,23 @@ document.addEventListener("DOMContentLoaded", () => {
     // Parse quantity input as float, default to 1 if invalid
     let expenseQuantity = parseFloat(quantityInput.value) || 1;
 
+    // Format Date
+    function formatDate(timestamp) {
+      const date = new Date(timestamp);
+
+      const options = {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric'
+      };
+
+      return date.toLocaleDateString('en-US', options);
+    }
+
     // Calculate total cost
     const totalCost = expenseAmount * expenseQuantity;
+
+    const calendarDate = new Date(); // Calendar date
 
     // Validate inputs
     if (expenseName && expenseAmount > 0) {
@@ -228,6 +243,7 @@ document.addEventListener("DOMContentLoaded", () => {
         originalAmount: expenseAmount,
         amount: totalCost,
         quantity: expenseQuantity,
+        formattedDate: formatDate(calendarDate),
         date: new Date().toLocaleDateString(), // Calendar date
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true }) // Time in 12-hour format
       };
@@ -269,7 +285,7 @@ document.addEventListener("DOMContentLoaded", () => {
           ${expense.quantity}
         </span>
       </td>
-      <td class="text-break fw-medium text-capitalize"><span class="badge text-bg-info">${expense.date}</span></td>
+      <td class="text-break fw-medium text-capitalize"><span class="badge text-bg-info">${expense.formattedDate}</span></td>
       <td class="text-break fw-medium text-capitalize"><span class="badge text-bg-success">${expense.timestamp}</span></td>
       <td>
         <div class="d-flex mx-1">
