@@ -729,20 +729,18 @@ document.addEventListener("DOMContentLoaded", () => {
     // Calculate the sum of all expenses
     const totalExpense = expenses.reduce((sum, expense) => sum + expense.amount, 0);
 
-    // Clone the expenses array and add the total row
+    // Clone the expenses array and add the total row, excluding 'id' and 'date'
     const dataWithTotal = [
-      ...expenses.map(expense => ({
+      ...expenses.map(({ id, date, ...expense }) => ({
         ...expense,
         originalAmount: formatCurrency(expense.originalAmount),
         amount: formatCurrency(expense.amount)
       })),
       {
-        id: '',
         name: 'Total',
         originalAmount: '',
         amount: formatCurrency(totalExpense),
         quantity: '',
-        date: '',
         timestamp: ''
       }
     ];
