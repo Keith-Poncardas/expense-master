@@ -1,4 +1,4 @@
-// Program Title : TaskTally
+// Program Title : Expense Master
 // Programmer & Author : Keith Ralph Robles Poncardas
 // Programming Language : Vanilla JavaScript
 // Deployment Date : July 31, 2024
